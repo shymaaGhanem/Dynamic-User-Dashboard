@@ -1,0 +1,13 @@
+.user-details {
+  border: 1px solid #0a58ca;
+  transition: 0.5s;
+}
+
+.user-info {
+  a {
+    transition: 0.5s;
+    &:hover {
+      color: #0a58ca !important;
+    }
+  }
+}

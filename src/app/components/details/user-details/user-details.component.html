@@ -1,0 +1,42 @@
+<div *ngIf="!loading;else noData">
+    <header class="vh-30">
+        <div class="container h-100">
+            <div class="h-100 d-flex  align-items-center">
+                <h2><span class="text-capitalize fw-bolde">user / </span><span>{{userDetails?.first_name}} {{userDetails?.last_name}}</span></h2>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container my-5">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-md-3 text-center">
+                <div class="rounded position-relative p-3 user-details">
+                    <p class="badge bg-primary position-absolute top-0 start-50 translate-middle">{{userDetails?.id}}</p>
+                    <img class="w-100 rounded" src="{{userDetails?.avatar}}"
+                    alt="{{userDetails?.first_name}}{{userDetails?.last_name}}"/>
+                </div>    
+                </div>
+                    <div class="col-md-8">
+                        <div class="user-info mt-5">
+                           <p class="mb-0 fw-medium fs-3">{{userDetails?.first_name}}{{userDetails?.last_name}}</p>
+                           <a class="text-decoration-none fs-5 fw-light text-secondary" href="mailto:{{userDetails?.email}}">{{userDetails?.email}}</a> 
+                           <p class="lead text-secondary py-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi aut placeat provident laudantium numquam obcaecati enim amet, dolor exercitationem, odit, modi itaque. Ex blanditiis dicta saepe explicabo omnis in similique?</p>
+                        </div>
+                    </div>
+              
+            </div>
+            <div class="mt-5">
+                <a routerLink="/"><i class="fa-solid fa-circle-chevron-left fa-3x"></i></a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<ng-template #noData>
+    <div class="row">
+        <div  
+        class="text-center boxstatus d-flex justify-content-center align-items-center  shadow-sm">
+        <app-sub-loader></app-sub-loader>
+      </div>
+    </div>
+  </ng-template>

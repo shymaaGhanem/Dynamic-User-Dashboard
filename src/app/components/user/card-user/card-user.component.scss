@@ -1,0 +1,23 @@
+.user {
+    border: 1px solid #0A58CA;
+    transition:0.5s ease-out;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid rgb(89, 172, 220);
+      background-color: #f8f9fa;
+      transform: scale(1.1);
+    }
+    img {
+      transition: 0.5s;
+      height:210px;
+      width:200px;
+    }
+  }
+  
+.user-card{
+  opacity: 0;
+  transition:0.5s ease-out;
+}
+.user-card.visible {
+    opacity: 1 !important;
+  }
